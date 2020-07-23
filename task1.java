@@ -21,10 +21,14 @@ public class task1 {
 		System.out.println("Before: "+Arrays.toString(arr));
 		
 		List<String> myList = new ArrayList<String>(Arrays.asList(arr));
-		for(int i=0;i<arr.length-1;i++)
-		if(sortString(arr[i]).equals(sortString(arr[i+1]))) {
-			myList.remove(i+1);
+		for(int i=0;i<arr.length;i++) {
+		if(i==(arr.length-1))
+			break;
+			if(sortString(arr[i]).equals(sortString(arr[i+1]))) {
+			myList.remove(arr[i+1]);
 		}
+	
+	}
 		System.out.println("After: "+myList);
 	}
 
